@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TSA SPORTS GALA SEASON X</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app" >
+    <h1 id="ss"> TSA SPORTS GALA SEASON X</h1>
+   <center> <H2>Team Selection</H2></center>
+
+    <div class="spinners-row">
+      <div class="spinner-card">
+        <canvas id="captainCanvas" width="360" height="360"></canvas>
+        <div class="arrow"></div>
+        <div class="label">Captains</div>
+      </div>
+
+      <div class="controls">
+        <button id="spinBtn"> Spin </button>
+        <!-- <div class="hint">Arrow points to the selected slice</div> -->
+      </div>
+
+      <div class="spinner-card">
+        <canvas id="teamCanvas" width="360" height="360"></canvas>
+        <div class="arrow"></div>
+        <div class="label">Teams</div>
+      </div>
+    </div>
+
+    <section class="records">
+      <h2>Records</h2>
+      <div id="recordsBox"></div>
+      <!-- <div class="notes">Selected captain → team are removed from spinners automatically.</div> -->
+    </section>
+  </div>
+
+  <!-- final modal -->
+  <div id="finalModal" class="modal">
+    <div class="modal-inner">
+      <h2>Final Result</h2>
+      <div id="finalList" class="final-list"></div>
+      <div class="modal-actions">
+        <button id="closeFinal">Close</button>
+        <button id="downloadCsv">Download </button>
+      </div>
+    </div>
+  </div>
+
+  <audio id="spinSound" src="sounds/spin.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

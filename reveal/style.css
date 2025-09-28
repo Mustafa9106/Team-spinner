@@ -3,6 +3,7 @@ a {
     text-decoration: none;
 }
 
+
 /* Custom scrollbar styling for the modal content */
 .modal-content-container::-webkit-scrollbar {
     width: 8px;
@@ -72,7 +73,7 @@ a {
 body{
      background:linear-gradient(180deg,#ececec 0%,#a6dbff 100%);
 }
-body {
+/* body {
     margin: auto;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     overflow: auto;
@@ -140,4 +141,4 @@ body {
     100% {
         transform: translateX(1);
     }
-}
+} */

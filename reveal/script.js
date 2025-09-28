@@ -82,7 +82,7 @@ function openModal(teamId) {
     modalShirtImage.classList.remove('opacity-100'); // Reset opacity for transition
     modalShirtImage.classList.add('opacity-0'); // Start hidden
 
-    modalShirtDescription.textContent = `${team.name}'s official design features their signature ${team.color} color palette.`;
+    // modalShirtDescription.textContent = `${team.name}'s official design features their signature ${team.color} color palette.`;
 
     // Display the modal using Tailwind classes
     modal.classList.remove('hidden');

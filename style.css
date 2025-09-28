@@ -12,8 +12,10 @@
 *{box-sizing:border-box}
 body{
   margin:0;
-  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
-  background:linear-gradient(180deg,#ececec 0%,var(--bg) 100%);
+  /* font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; */
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  /* background:linear-gradient(180deg,#ececec 0%,var(--bg) 100%); */
+  background: linear-gradient(to bottom, #a0d8ff, #ffffff);
   color:#0f172a;
   display:flex;
   min-height:100vh;
@@ -184,11 +186,11 @@ canvas {
     width: 40px;
   }
 }
-body {
+/* body {
     margin: auto;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     overflow: auto;
-    background: linear-gradient(315deg, rgba(101, 0, 94, 0.726) 3%, rgba(60, 133, 206, 0.719) 38%, rgba(48, 238, 225, 0.644) 68%, rgba(255,25,25,1) 98%);
+    background: linear-gradient(315deg, rgba(255, 61, 61, 0.726) 3%, rgb(241, 150, 150) 38%, rgba(82, 70, 70, 0.932) 68%, rgba(255,25,25,1) 98%);
     animation: gradient 15s ease infinite;
     background-size: 400% 400%;
     background-attachment: fixed;
@@ -252,4 +254,4 @@ body {
     100% {
         transform: translateX(1);
     }
-}
+} */

@@ -175,17 +175,20 @@ function animateSpin(ctx, items, startRotation, totalRotation, duration, isCapta
 // ========================
 // Spin both wheels
 // ========================
+// ========================
+// Spin sequentially
+// ========================
 async function spinBoth(){
   if(spinBtn.disabled) return;
   if(captains.length === 0 || teams.length === 0) {
     showFinal();
     return;
   }
+
   spinBtn.disabled = true;
   spinBtn.textContent = 'Spinning...';
-  spinSound.currentTime = 0;
-  spinSound.play();
 
+  // random total rotations
   const fullTurns = 4 + Math.floor(Math.random()*3);
   const extraC = Math.random() * 2*Math.PI;
   const extraT = Math.random() * 2*Math.PI;
@@ -193,13 +196,20 @@ async function spinBoth(){
   const totalC = fullTurns * 2*Math.PI + extraC;
   const totalT = fullTurns * 2*Math.PI + extraT;
 
-  const duration = 4200;
+  const durationC = 9000 + Math.random()*1000; // 5–6 sec
+  const durationT = 9000; // same as before
 
-  const promiseC = animateSpin(ctxC, captains, rotC, totalC, duration, true);
-  const promiseT = animateSpin(ctxT, teams, rotT, totalT, duration, false);
+  // 1) spin captain first
+  spinSound.currentTime = 0;
+  spinSound.play();
+  const resC = await animateSpin(ctxC, captains, rotC, totalC, durationC, true);
 
-  const [resC, resT] = await Promise.all([promiseC, promiseT]);
+  // 2) after captain stops, spin team
+  spinSound.currentTime = 0; // restart sound
+  spinSound.play();
+  const resT = await animateSpin(ctxT, teams, rotT, totalT, durationT, false);
 
+  // assignment logic stays the same
   const capIndex = resC.index;
   const teamIndex = resT.index;
   const chosenCaptain = captains[capIndex];
@@ -228,6 +238,7 @@ async function spinBoth(){
     }
   }, 600);
 }
+
 
 // ========================
 // UI helpers

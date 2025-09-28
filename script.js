@@ -266,7 +266,7 @@ function showFinal(){
 function closeFinalModal(){
   finalModal.style.display = 'none';
 }
-function downloadCSV(){
+function download(){
   if(assignments.length === 0) return;
   const header = 'Captain,Team\n';
   const rows = assignments.map(a => `"${a.captain}","${a.team}"`).join('\n');

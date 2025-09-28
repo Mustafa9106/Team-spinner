@@ -17,11 +17,57 @@ body{
   color:#0f172a;
   display:flex;
   min-height:100vh;
-  align-items:flex-start;
+  align-items:center;
   justify-content:center;
   padding:10px;
+  flex-direction: column;
 
 
+}
+
+#shirt-btn{
+  background: #ff0800;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgb(226, 47, 47) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+#shirt-btn:hover,
+#shirt-btn:active {
+  background:linear-gradient(135deg, #cc0000, #ff1a1a);
+  background-position: 0 0;
+  color: #FF4742;
+  /* transform:skew(4deg) */
+}
+
+#shirt-btn:active {
+  opacity: .5;
+}
+a{
+  list-style: none;
+  color: white;
+  font-weight: 200;
+  /* font-style:normal; */
+  /* font-style: none; */
+  text-decoration: none;
 }
 
 .app{width:100%;max-width:1100px}
@@ -137,4 +183,73 @@ canvas {
   .logo{
     width: 40px;
   }
+}
+body {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgba(101, 0, 94, 0.726) 3%, rgba(60, 133, 206, 0.719) 38%, rgba(48, 238, 225, 0.644) 68%, rgba(255,25,25,1) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
 }

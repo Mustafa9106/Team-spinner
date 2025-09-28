@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gala Shirt Reveal - Click to View!</title>
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to external custom CSS file -->
+    <link rel="stylesheet" href="/reveal/style.css">
+</head>
+<body class="bg-gray-900 text-white font-sans min-h-screen flex flex-col">
+      <div>
+     <div class="wave"></div>
+     <div class="wave"></div>
+     <div class="wave"></div>
+
+    <!-- Header Section -->
+    <header class="bg-gray-0 shadow-lg py-6 mb-">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-black-400">
+                <span class="block">Sports Gala Shirts Reveal</span>
+            </h1>
+            <p class="mt-2 text-xl text-gray-300">
+                Click on your team's badge to see the official shirt design!
+            </p>
+        </div>
+    </header>
+
+    <!-- Team Grid Section -->
+    <main class="container mx-auto px-4 flex-grow">
+        <div id="team-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 p-4">
+            <!-- Team cards will be injected here by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Shirt Reveal Modal -->
+    <div id="design-modal" class="fixed inset-0 bg-gray-900 bg-opacity-90 backdrop-blur-sm hidden items-center justify-center p-4 z-50 transition-opacity duration-300" onclick="closeModal()">
+        <div class="bg-gray-800 rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden transform scale-95 transition-all duration-300" onclick="event.stopPropagation()">
+            <!-- Modal Header -->
+            <div class="p-5 bg-indigo-600 flex justify-between items-center">
+                <h2 id="modal-team-name" class="text-3xl font-bold text-white uppercase"></h2>
+                <button onclick="closeModal()" class="text-white hover:text-gray-200 transition-colors focus:outline-none p-1 rounded-full hover:bg-indigo-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Modal Body (Image Container) -->
+            <div class="p-6 modal-content-container max-h-[70vh] overflow-y-auto">
+                <div class="aspect-square bg-gray-700 rounded-xl overflow-hidden shadow-lg border-4 border-indigo-400">
+                    <img id="modal-shirt-image" src="" alt="Team Shirt Design" class="w-full h-full object-cover transition-opacity duration-500 opacity-0" />
+                </div>
+                <p id="modal-shirt-description" class="mt-4 text-center text-lg font-medium text-gray-300"></p>
+                <div class="mt-6 text-center">
+                    <button onclick="closeModal()" class="px-6 py-3 bg-indigo-500 text-white font-semibold rounded-full hover:bg-indigo-400 transition-transform duration-200 transform hover:scale-105 shadow-lg">
+                        Close Gallery
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Link to external JavaScript file -->
+    <script src="/reveal/script.js"></script>
+</body>
+</html>

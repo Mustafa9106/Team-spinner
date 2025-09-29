@@ -1,15 +1,15 @@
 // List of 10 teams with their placeholder image URLs for the shirt design reveal.
 const teams = [
-    { id: 1, name: "Talal Titans", tagline: "Electric blue and fast yellow.", color: "Pink", image: "/images/talal.jpeg" },
-    { id: 2, name: "GM Bravo", tagline: "Speeding in bright cyan.", color: "Cyan", image: "/images/gm.jpeg" },
-    { id: 3, name: "Zain Strikers", tagline: "Strength in black and emerald.", color: "Green", image: "/images/zain.jpeg" },
-    { id: 4, name: "Khatri KnightRiders", tagline: "A vibrant, striking purple.", color: "Purple", image: "/images/khatri.jpeg" },
-    { id: 5, name: "MM Fighters", tagline: "Victory in fiery orange.", color: "Orange", image: "/images/mm.jpeg" },
-    { id: 6, name: "ST Squads", tagline: "Sleek and stealthy grey.", color: "Gray", image: "/images/st.jpeg" },
-    { id: 7, name: "Saqib Stallions", tagline: "Classic maroon and bold.", color: "Maroon", image: "/images/saqib.jpeg" },
-    { id: 8, name: "Samad Shaheens", tagline: "Striking neon lime green.", color: "amber", image: "/images/samad.jpeg" },
-    { id: 9, name: "Executive XI", tagline: "Rising in crimson and gold.", color: "Yellow", image: "/images/ex.jpeg" },
-    { id: 10, name: "TCC Thunders", tagline: "Defiance in deep teal.", color: "stone", image: "/images/tcc.jpeg" },
+    { id: 1, name: "Talal Titans", color: "Pink", image: "/images/talal.jpeg" },
+    { id: 2, name: "GM Bravo",  color: "Cyan", image: "/images/gm.jpeg" },
+    { id: 3, name: "Zain Strikers", color: "Green", image: "/images/zain.jpeg" },
+    { id: 4, name: "Khatri KnightRiders",  color: "Purple", image: "/images/khatri.jpeg" },
+    { id: 5, name: "MM Fighters", color: "Orange", image: "/images/mm.jpeg" },
+    { id: 6, name: "ST Squads",  color: "Gray", image: "/images/st.jpeg" },
+    { id: 7, name: "Saqib Stallions",  color: "Maroon", image: "/images/saqib.jpeg" },
+    { id: 8, name: "Samad Shaheens",  color: "amber", image: "/images/samad.jpeg" },
+    { id: 9, name: "Executive XI",  color: "Yellow", image: "/images/ex.jpeg" },
+    { id: 10, name: "TCC Thunders",  color: "stone", image: "/images/tcc.jpeg" },
 ];
 
 // Get DOM elements

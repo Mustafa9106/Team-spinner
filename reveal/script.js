@@ -1,15 +1,15 @@
 // List of 10 teams with their placeholder image URLs for the shirt design reveal.
 const teams = [
-    { id: 1, name: "MM Fighters", tagline: "Electric blue and fast yellow.", color: "Indigo", image: "/images/tsa.jpeg" },
-    { id: 2, name: "GM Bravo", tagline: "Rising in crimson and gold.", color: "Red", image: "https://placehold.co/500x500/EF4444/FFFFFF?text=PHOENIX+JERSEY" },
-    { id: 3, name: "TCC Thunders", tagline: "Strength in black and emerald.", color: "Green", image: "https://placehold.co/500x500/10B981/000000?text=IRON+DRAGONS+JERSEY" },
-    { id: 4, name: "ST Squad", tagline: "A vibrant, striking purple.", color: "Purple", image: "https://placehold.co/500x500/A855F7/FFFFFF?text=RAPTORS+JERSEY" },
-    { id: 5, name: "Zain Strikers", tagline: "Victory in fiery orange.", color: "Orange", image: "https://placehold.co/500x500/F97316/000000?text=GLADIATORS+JERSEY" },
-    { id: 6, name: "Khatri KnightRiders", tagline: "Sleek and stealthy grey.", color: "Gray", image: "https://placehold.co/500x500/6B7280/FFFFFF?text=STEALTH+NINJAS+JERSEY" },
-    { id: 7, name: "Manai Kings", tagline: "Classic maroon and bold.", color: "Maroon", image: "https://placehold.co/500x500/B91C1C/FDE047?text=TITANS+JERSEY" },
-    { id: 8, name: "Samad Shaheens", tagline: "Striking neon lime green.", color: "Lime", image: "https://placehold.co/500x500/84CC16/000000?text=VIPERS+JERSEY" },
-    { id: 9, name: "Saqib Stallions", tagline: "Speeding in bright cyan.", color: "Cyan", image: "https://placehold.co/500x500/06B6D4/FFFFFF?text=COMETS+JERSEY" },
-    { id: 10, name: "The Mavericks", tagline: "Defiance in deep teal.", color: "Teal", image: "https://placehold.co/500x500/0D9488/FFFFFF?text=MAVERICKS+JERSEY" },
+    { id: 1, name: "Talal Titans", tagline: "Electric blue and fast yellow.", color: "Pink", image: "/images/talal.jpeg" },
+    { id: 2, name: "GM Bravo", tagline: "Speeding in bright cyan.", color: "Cyan", image: "/images/gm.jpeg" },
+    { id: 3, name: "Zain Strikers", tagline: "Strength in black and emerald.", color: "Green", image: "/images/zain.jpeg" },
+    { id: 4, name: "Khatri KnightRiders", tagline: "A vibrant, striking purple.", color: "Purple", image: "/images/khatri.jpeg" },
+    { id: 5, name: "MM Fighters", tagline: "Victory in fiery orange.", color: "Orange", image: "/images/mm.jpeg" },
+    { id: 6, name: "ST Squads", tagline: "Sleek and stealthy grey.", color: "Gray", image: "/images/st.jpeg" },
+    { id: 7, name: "Saqib Stallions", tagline: "Classic maroon and bold.", color: "Maroon", image: "/images/saqib.jpeg" },
+    { id: 8, name: "Samad Shaheens", tagline: "Striking neon lime green.", color: "amber", image: "/images/samad.jpeg" },
+    { id: 9, name: "Executive XI", tagline: "Rising in crimson and gold.", color: "Yellow", image: "/images/ex.jpeg" },
+    { id: 10, name: "TCC Thunders", tagline: "Defiance in deep teal.", color: "stone", image: "/images/tcc.jpeg" },
 ];
 
 // Get DOM elements
@@ -26,16 +26,16 @@ const modalShirtDescription = document.getElementById('modal-shirt-description')
  */
 function createTeamCard(team) {
     // Determine a highlight color class based on the team's primary color
-    let bgColor = 'bg-indigo-500';
-    if (team.color === 'Red') bgColor = 'bg-red-500';
-    else if (team.color === 'Green') bgColor = 'bg-green-500';
-    else if (team.color === 'Purple') bgColor = 'bg-purple-500';
-    else if (team.color === 'Orange') bgColor = 'bg-orange-500';
+    let bgColor = 'bg-pink-500';
+    if (team.color === 'Yellow') bgColor = 'bg-yellow-500';
+    else if (team.color === 'Green') bgColor = 'bg-green-700';
+    else if (team.color === 'Purple') bgColor = 'bg-purple-800';
+    else if (team.color === 'Orange') bgColor = 'bg-orange-600';
     else if (team.color === 'Gray') bgColor = 'bg-gray-500';
     else if (team.color === 'Maroon') bgColor = 'bg-rose-700';
-    else if (team.color === 'Lime') bgColor = 'bg-lime-500';
+    else if (team.color === 'amber') bgColor = 'bg-amber-500';
     else if (team.color === 'Cyan') bgColor = 'bg-cyan-500';
-    else if (team.color === 'Teal') bgColor = 'bg-teal-500';
+    else if (team.color === 'stone') bgColor = 'bg-stone-950';
 
     return `
         <div 

@@ -4,7 +4,7 @@ const initialCaptains = [
   "AbdulAziz",
   "Abdullah Arain",
   "Abdullah Haroon",
-  "Huzaifa Khan",
+  "Zohaib ",
   "Muhammad Sami",
   "Subhan",
   "Anas Nafees",
@@ -12,7 +12,7 @@ const initialCaptains = [
 ];
 const initialTeams = [
   "MM Fighters","Khatri KnightRiders","ST Squad","Zain Strikers","Samad Shaheen",
-  "GM Bravos","Manai Kings","Saqib Stallions"
+  "GM Bravos","Talal Titans","Saqib Stallions"
 ];
 
 const captainCanvas = document.getElementById('captainCanvas');

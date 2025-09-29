@@ -44,7 +44,6 @@ function createTeamCard(team) {
         >
             <div class="text-4xl font-extrabold mb-1">#${team.id}</div>
             <h3 class="text-xl font-bold text-center mt-2">${team.name}</h3>
-            <p class="text-sm text-center italic text-opacity-80">${team.tagline}</p>
         </div>
     `;
 }
